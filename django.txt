@@ -78,7 +78,7 @@ Search on google connect postgresql to django and copy [DATABASE]
 # psycopg2-binary package
 pip install psycopg2-binary
 
-# Migrate on postgresql
+# Migrate all models on postgresql
 python3 manage.py migrate
 
 
@@ -90,3 +90,16 @@ python manage.py dumbdata app_name > create_file_name [Example python manage.py 
 
 # To save project all data
 python manage.py dumpdata > create_file_name [Example python manage.py dumpdata > back.json]
+
+#........................................................................................................
+
+#  Django Rest Framework
+
+# Install Django Rest Framework.
+pip3 install djangorestframework
+
+# 
+INSTALLED_APPS = [
+    ...
+    'rest_framework',
+]
