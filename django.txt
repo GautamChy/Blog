@@ -31,6 +31,9 @@ git add .
 # git commit 
 git commit -m "message"
 
+# push into git
+git push
+
 # migration file
 python3 manage.py makemigrations  [Note = makemigrations ley matra models lai herxa aru lai herdina like views.py,admin.py][migrations garnu vanda pahila app_name chahee project ko Installed APP vitra  app_name put garney]
 

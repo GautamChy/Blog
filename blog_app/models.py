@@ -22,7 +22,7 @@ class Post(models.Model):
     published_date = models.DateField(auto_now_add=True)
     is_published = models.BooleanField(default=True)
     category = models.ForeignKey(Category,on_delete=models.CASCADE)
-    tags = models.ManyToManyField(Tag,blank=True)
+    tags = models.ManyToManyField(Tag)
     author = models.ForeignKey(User,on_delete=models.CASCADE)
      
     def __str__(self):
