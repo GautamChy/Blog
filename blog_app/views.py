@@ -5,14 +5,16 @@ from .serializers import CategorySerializers,PostSerializers,CommentSerializers,
 from rest_framework.pagination import  PageNumberPagination
 from rest_framework import filters
 from django_filters import rest_framework as filter
+from .permission import IsAuthenticatedOrReadOnly
 
 
 # Create your views here.
 class CategoryAPIView(ModelViewSet):
-    
-    #queryset = Category.objects.select_related() # To reduce time with the help of debug_tool_bar
     queryset = Category.objects.all()
     serializer_class = CategorySerializers
+    pagination_class = PageNumberPagination
+    permission_classes =[IsAuthenticatedOrReadOnly]
+    
     
     # modify pagination
 class Pages(PageNumberPagination):
@@ -23,8 +25,9 @@ class PostAPIView(ModelViewSet):
     serializer_class = PostSerializers
     pagination_class = Pages
     filter_backends = [filters.SearchFilter,filter.DjangoFilterBackend]
-    filterset_fields = ('published_date',)
+    filterset_fields = ('published_date','tags')
     search_fields = ['id','title','category__name','author__username']
+    permission_classes =[IsAuthenticatedOrReadOnly]
     
     
     # Modify pagination 
@@ -36,6 +39,9 @@ class CommentAPIView(ModelViewSet):
     serializer_class = CommentSerializers
     pagination_class = PageNumberPagination
     pagination_class = Pages
+    permission_classes =[IsAuthenticatedOrReadOnly]
+    
+    
     
 
  # Default pagination 
@@ -43,6 +49,7 @@ class TagAPIView(ModelViewSet):
     queryset = Tag.objects.all()
     serializer_class = TagSerializers
     pagination_class = PageNumberPagination
+    permission_classes =[IsAuthenticatedOrReadOnly]
 
     
         

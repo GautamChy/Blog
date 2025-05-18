@@ -2,7 +2,7 @@
   {
     "model": "blog_app.category",
     "pk": 1,
-    "fields": { "name": "Pasta - Cheese / Spinach Bauletti" }
+    "fields": { "name": "Female" }
   },
   {
     "model": "blog_app.category",
