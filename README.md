@@ -8,7 +8,7 @@ The project also includes RESTful API support with Swagger documentation.
 1) ✅ Create, Read, Update, Delete (CRUD) for posts, categories, comments, and tags
 2) 🏷️ Data filtering and searching:
       * Allow users to search blog posts by title,category,or author.
-      * Filter posts by tags or pub;ication data.
+      * Filter posts by tags or published data.
 3) 📄 Data Pagination:
       * Paginate blog posts and comment threads for easier navigation.
 4) 🔐 Authentication:
