@@ -4,33 +4,6 @@ A Django-based blog platform where users can read, create, and manage blog posts
 The project also includes RESTful API support with Swagger documentation.
 
 ## 🚀 Features Included.
-
- DATABASE DESIGN:
- a) User
-   * id(Primary Key)
-   * username
-   * email
-   * password
-b)Category
-  * id(Primary Key)
-  * name(CharField)
-c)Tags
-  * id(Primary key)
-  * name(CharField)
-d)post
- * id(Primary Key)
- * title(CharField)
- * body(TextField)
- * published_date(DateField)
- * is_published(BooleanField)
- * category(ForeignKey)
- * tags(ManyToManyField)
- * author(ForeignKey)
-e)Comment
- * author(Foreignkey)
- * post(ForeignKey)
- * comment(TextField)
- * created_at(DateTimeField)
    
 1) ✅ Create, Read, Update, Delete (CRUD) for posts, categories, comments, and tags
 2) 🏷️ Data filtering and searching:
